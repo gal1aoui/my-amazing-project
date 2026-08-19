@@ -9,6 +9,7 @@ type User = {
   picture?: string;
   login?: string;
   avatar_url?: string;
+  username?: string;
 };
 
 type AuthContextType = {
