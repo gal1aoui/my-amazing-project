@@ -1,5 +1,5 @@
 import React from 'react';
-import { iconSizes } from '@/theme/iconSizes';
+import { iconSizes } from '@/app/theme/iconSizes';
 
 type IconProps = {
   name: keyof typeof icons;
