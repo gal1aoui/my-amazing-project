@@ -82,8 +82,8 @@ export async function GET(request: Request) {
   }
 
   // If no code, initiate OAuth flow
-  const state = Math.random().toString(36).substring(2, 15);
-  cookies().set('google_oauth_state', state, {
+  const oauthState = Math.random().toString(36).substring(2, 15);
+  cookies().set('google_oauth_state', oauthState, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
