@@ -27,23 +27,16 @@ export default function Icon({
   const svg = icons[name];
   const sizeClass = iconSizes[size];
 
-  // Determine ARIA attributes
   const ariaProps: Record<string, string> = {};
   if (decorative) {
     ariaProps['aria-hidden'] = 'true';
   } else {
+    ariaProps['role'] = 'img';
     if (ariaLabel) {
       ariaProps['aria-label'] = ariaLabel;
-      ariaProps['role'] = 'img';
     } else if (title) {
-      // We'll create a title element inside the SVG? For simplicity, we'll use aria-label.
       ariaProps['aria-label'] = title;
-      ariaProps['role'] = 'img';
     }
-    // If neither title nor ariaLabel provided and not decorative, we still want to hide?
-    // According to accessibility, meaningful icons need labels. We'll assume consumer provides one.
-    // We'll not add any aria attributes if none provided and not decorative? That would be inaccessible.
-    // For safety, we'll add role="img" and aria-labelledby? We'll just leave it as is and hope consumer provides.
   }
 
   return (
