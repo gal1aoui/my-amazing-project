@@ -7,6 +7,7 @@ type IconProps = {
   title?: string;
   ariaLabel?: string;
   decorative?: boolean;
+  className?: string;
 };
 
 const icons = {
@@ -41,7 +42,7 @@ export default function Icon({
 
   return (
     <span
-      className={`flex-shrink-0 ${sizeClass}`}
+      className={`flex-shrink-0 ${sizeClass} ${className ?? ''}`}
       {...ariaProps}
       dangerouslySetInnerHTML={{ __html: svg }}
     />
