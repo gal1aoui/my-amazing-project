@@ -27,7 +27,7 @@ export default function Home() {
         <Icon
           name="next"
           size="md"
-          className="dark:invert h-5 w-[100px]"
+          className="dark:invert w-auto"
           ariaLabel="Next.js logo"
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
@@ -66,7 +66,7 @@ export default function Home() {
             <Icon
               name="vercel"
               size="sm"
-              className="dark:invert h-[14px] w-4"
+              className="dark:invert h-[14px] w-auto"
               ariaLabel="Vercel logomark"
             />
             Deploy Now
