@@ -24,6 +24,7 @@ export default function Icon({
   title,
   ariaLabel,
   decorative = false,
+  className,
 }: IconProps) {
   const svg = icons[name];
   const sizeClass = iconSizes[size];
